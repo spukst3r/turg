@@ -118,6 +118,8 @@ def urb_ws_plotter(object_dict, palette, pos, turg_db):
     print(f"Plot start position {pos}")
     [print(color(chr(9608), chr_color), end='') for chr_color in palette]
     print()
+    print("palette = [{}]".format(','.join(map(lambda c: f'\'{c}\'', palette))))
+    print()
 
     db = MongoClient(turg_db).get_database()
 
